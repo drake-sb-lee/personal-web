@@ -5,12 +5,18 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 import {BrowserRouter} from 'react-router-dom'
+import PersonalThemeProvider from './theme/components/PersonalThemeProvider'
+import GlobalProvider from './app/providers/GlobalProvider'
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
-          <App />
-      </BrowserRouter>
+      <GlobalProvider>
+          <BrowserRouter>
+              <PersonalThemeProvider>
+                  <App/>
+              </PersonalThemeProvider>
+          </BrowserRouter>
+      </GlobalProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
