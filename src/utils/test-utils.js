@@ -2,12 +2,15 @@ import React from 'react'
 import {render, queries} from '@testing-library/react'
 import {BrowserRouter} from 'react-router-dom'
 import * as customQueries from './custom-queries'
+import PersonalThemeProvider from '../theme/components/PersonalThemeProvider'
 
 // Add new providers here for test
 const AllProviders = ({children}) => {
     return (
         <BrowserRouter>
-            {children}
+            <PersonalThemeProvider>
+                {children}
+            </PersonalThemeProvider>
         </BrowserRouter>
     )
 }
