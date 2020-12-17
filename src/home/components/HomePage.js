@@ -27,9 +27,9 @@ const StyledLink = styled(Link)`
 
 const Divider = ({className}) => {
     return (
-        <a className={className}>
+        <span className={className}>
             |
-        </a>
+        </span>
     )
 }
 
