@@ -4,7 +4,7 @@ import {GlobalContext} from '../../app/providers/GlobalProvider'
 
 const StyledButton = styled.button`
   background-color: ${props => props.theme.background};
-  color: ${props => props.theme.secondary};
+  color: ${props => props.theme.primary};
   height: 400px;
   width: 800px;
 `
