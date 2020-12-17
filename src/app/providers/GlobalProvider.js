@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 
 const GlobalContext = React.createContext({
-    theme: 'light'
+    theme: 'dark'
 });
 
 function GlobalProvider({children}) {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState('dark')
 
     return (
         <GlobalContext.Provider value={{theme, setTheme}}>

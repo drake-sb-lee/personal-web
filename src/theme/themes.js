@@ -1,9 +1,9 @@
 const light = {
-    background: 'white',
+    background: '#FFFFFF',
     secondary: 'black'
 }
 const dark = {
-    background: 'black',
+    background: '#121212',
     secondary: 'white'
 }
 
