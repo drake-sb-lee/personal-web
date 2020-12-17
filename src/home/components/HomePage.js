@@ -8,12 +8,34 @@ const StyledRootContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Rubik", sans-serif;
-  font-weight: 700;
-  font-size: 36px
 `
 const StyledTitleContainer = styled.div`
-  color: white;
+  color: ${props => props.theme.primary};
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+`
+
+const StyledLink = styled(Link)`
+  color: ${props => props.theme.sub};
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 0px 12px;
+`
+
+const Divider = ({className}) => {
+    return (
+        <a className={className}>
+            |
+        </a>
+    )
+}
+
+const StyledDivider = styled(Divider)`
+  font-weight: 100;
+  font-size: 12px;
 `
 
 function HomePage() {
@@ -21,11 +43,16 @@ function HomePage() {
         <StyledRootContainer>
             <StyledTitleContainer>
                 Drake Lee
+                <div>
+                    <StyledLink to='/about'>About</StyledLink>
+                    <StyledDivider/>
+                    <StyledLink to='/work'>Work</StyledLink>
+                    <StyledDivider/>
+                    <StyledLink to='/contact'>Contact</StyledLink>
+                    <StyledDivider/>
+                    <StyledLink to='/prototype'>Prototypes</StyledLink>
+                </div>
             </StyledTitleContainer>
-            {/*<Link to='/about'>About</Link>*/}
-            {/*<Link to='/work'>Work</Link>*/}
-            {/*<Link to='/contact'>Contact</Link>*/}
-            {/*<Link to='/prototype'>Prototypes</Link>*/}
         </StyledRootContainer>
     )
 }

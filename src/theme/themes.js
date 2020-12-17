@@ -1,10 +1,12 @@
 const light = {
     background: '#FFFFFF',
-    secondary: 'black'
+    primary: 'black',
+    sub: "#424242"
 }
 const dark = {
     background: '#121212',
-    secondary: 'white'
+    primary: 'white',
+    sub: '#F5F5F5'
 }
 
 export {
